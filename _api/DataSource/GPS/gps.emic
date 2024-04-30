@@ -31,8 +31,6 @@
 */
 
 
-//EMIC:setInput(DEV:_drivers/GPS/AT6558/AT6558.emic,puerto=.{puerto}.,baud=.{baud}.,bufferIn=.{bufferIn}.,bufferOut=.{bufferOut}.,frameLf=.{frameLf}.)
-
 
 EMIC:setOutput(TARGET:inc/gps_api.h)
   EMIC:setInput(inc/gps_api.h,puerto=.{puerto}.)
