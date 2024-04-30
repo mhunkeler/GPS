@@ -1,0 +1,31 @@
+//RFI TAG:driverName=FORCE
+
+#ifndef FORCE_API_EMIC
+#define FORCE_API_EMIC
+
+/**
+* @fn uint16_t getForce();
+* @alias Force
+* @brief get force value
+* @return ADC value
+*/
+
+/**
+* @fn void ApiForce_OFF(void);
+* @alias Force Shutdown
+* @brief Shutdown force sensor
+* @return nothing
+*/
+
+#newRFIcode(_drivers\Force\Force.emic)
+
+#setFile codigo.c
+  ##include(inc/Force_api.h|inc/adc__{name}__api.h,name=_{name}_,channel=_{channel}_)
+#unSetFile
+
+#setFile src.c
+	##include(src/Force_api.c|src/adc__{name}__api.c,name=_{name}_,channel=_{channel}_)
+#unSetFile
+
+/*==================[end of file]============================================*/
+#endif

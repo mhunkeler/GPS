@@ -9,10 +9,11 @@ EMIC:setOutput(TARGET:generate.txt)
 
     //------------------- APIs -----------------------
     EMIC:setInput(DEV:_api/Indicators/LEDs/led.emic,name=ledRX,pin=Led1)
-    EMIC:setInput(DEV:_api/Indicators/LEDs/led.emic,name=ledTx,pin=Led2)
-
+    
     EMIC:setInput(DEV:_api/Timers/timer_api.emic,name=1)
     EMIC:setInput(DEV:_api/Timers/timer_api.emic,name=2)
+
+    EMIC:setInput(DEV:_api/DataSource/GPS/gps.emic)
 
     //-------------------- main  -----------------------
     EMIC:setInput(DEV:_main/baremetal/main.emic)

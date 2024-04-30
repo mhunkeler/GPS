@@ -1,0 +1,57 @@
+//RFI TAG:driverName=RAM
+
+/*****************************************************************************
+
+  @file     ram.emic
+
+  @brief    API for RAM modules.
+
+  @author   Ramiro Alarcon Lasagno
+
+  @date     25/10/2023
+
+  @version  v0.0.1 - Initial release.
+  
+*******************************************************************************/
+
+#ifndef RAM_EMIC
+#define RAM_EMIC
+
+/**
+* @fn void CircularBuffer_Read(char *buffer, uint8_t length);
+* @alias LeerRAM
+* @brief Usado para leer la cola circular
+* @param *buffer Valores a leer
+* @param length Tamaño de valores
+* @return Nothing
+*/
+
+/**
+* @fn void CircularBuffer_Write(char *text, uint8_t length);
+* @alias GuardarRAM
+* @brief Usado para guardar datos en la cola circular
+* @param *text Valores a guardar
+* @param length Tamaño de valores
+* @return Nothing
+*/
+
+/**
+* @fn void CircularBuffer_Reset(void);
+* @alias ResetearRAM
+* @brief Usado para resetear la cola circular
+* @return Nothing
+*/
+
+
+#newRFIcode(_drivers/RAM/R23A1024/R23A1024.emic)
+
+#setFile codigo.c
+  ##include(inc\RAM_api.h)
+#unSetFile
+
+#setFile src.c
+	##include(src\RAM_api.c)
+#unSetFile
+
+/*==================[end of file]============================================*/
+#endif

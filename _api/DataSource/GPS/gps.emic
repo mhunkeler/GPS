@@ -1,0 +1,46 @@
+//RFI TAG:driverName=GPS
+
+/*****************************************************************************
+
+  @file     gps.emic
+
+  @brief    API for GPS modules.
+
+  @author   Tomas Pentacolo
+
+  @date     28/11/2022
+
+  @version  v0.0.1 - Initial release.
+  
+*******************************************************************************/
+
+/**
+* @fn void GPS_config_power_mode(uint8_t mode);
+* @alias PowerMode
+* @brief Use to config the GPS power mode
+* @param mode Power mode - 0: Sleep mode - 1: Low power mode - 2: Full power mode
+* @return Nothing
+*/
+
+
+/**
+* @fn extern void eGPS();
+* @alias FirstReception
+* @brief When it receives the first valid data from GPS module
+* @return Nothing
+*/
+
+
+//EMIC:setInput(DEV:_drivers/GPS/AT6558/AT6558.emic,puerto=.{puerto}.,baud=.{baud}.,bufferIn=.{bufferIn}.,bufferOut=.{bufferOut}.,frameLf=.{frameLf}.)
+
+
+EMIC:setOutput(TARGET:inc/gps_api.h)
+  EMIC:setInput(inc/gps_api.h,puerto=.{puerto}.)
+EMIC:restoreOutput
+
+EMIC:setOutput(TARGET:gps_api.c)
+	EMIC:setInput(src/gps_api.c,puerto=.{puerto}.)
+EMIC:restoreOutput
+
+EMIC:define(main_includes.gps_api,gps_api)
+EMIC:define(c_modules.gps_api,gps_api)
