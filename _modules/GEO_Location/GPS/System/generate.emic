@@ -13,7 +13,7 @@ EMIC:setOutput(TARGET:generate.txt)
     EMIC:setInput(DEV:_api/Timers/timer_api.emic,name=1)
     EMIC:setInput(DEV:_api/Timers/timer_api.emic,name=2)
 
-    EMIC:setInput(DEV:_api/DataSource/GPS/gps.emic)
+    EMIC:setInput(DEV:_api/DataSource/GPS/gps.emic,puerto=1)
 
     //-------------------- main  -----------------------
     EMIC:setInput(DEV:_main/baremetal/main.emic)
