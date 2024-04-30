@@ -4,8 +4,8 @@ EMIC:setOutput(TARGET:generate.txt)
     EMIC:setInput(DEV:_pcb/pcb.emic,pcb=HRD_GPS)
 
     //------------------- Process generate files ----------------
-    EMIC:setInput(TARGET:usedFunction.emic)
-    EMIC:setInput(TARGET:usedEvent.emic)
+    EMIC:setInput(SYS:usedFunction.emic)
+    EMIC:setInput(SYS:usedEvent.emic)
 
     //------------------- APIs -----------------------
     EMIC:setInput(DEV:_api/Indicators/LEDs/led.emic,name=ledRX,pin=Led1)
